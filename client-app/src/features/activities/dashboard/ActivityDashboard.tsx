@@ -3,6 +3,7 @@ import { Grid } from 'semantic-ui-react';
 import { Activity } from '../../../app/models/activity';
 import ActivityDetails from '../details/ActivityDetails';
 import ActivityForm from '../form/ActivityForm';
+import ActivityGrid from '../grid/ActivityGrid';
 import ActivityList from './ActivityList';
 
 interface Props {
@@ -25,6 +26,9 @@ export default function ActivityDashboard({activities, selectedActivity, deleteA
                 <ActivityList activities={activities} 
                     selectActivity={selectActivity} 
                     deleteActivity={deleteActivity}
+                />
+                <ActivityGrid activities={activities} 
+                
                 />
             </Grid.Column>
             <Grid.Column width='6'>
